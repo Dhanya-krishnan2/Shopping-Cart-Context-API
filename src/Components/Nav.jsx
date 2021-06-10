@@ -4,7 +4,7 @@ import './Nav.css'
 import CartContext from './context/cart/CartContext'
 
 const Nav = () => {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, showHideCart } = useContext(CartContext);
   return (
     <nav>
     <div className='nav__left'>Store</div>
@@ -19,6 +19,7 @@ const Nav = () => {
         <i
           className='fa fa-shopping-cart'
           aria-hidden='true'
+          onClick={ showHideCart}
           
         />
         { 
